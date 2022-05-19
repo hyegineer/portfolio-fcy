@@ -300,6 +300,11 @@
       document.querySelector('.header-navigation').classList.toggle('active');
       document.querySelector('.header-overlay').classList.toggle('active');
     })
+
+    document.querySelector('.header-overlay').addEventListener('click', function (e) {
+      document.querySelector('.header-navigation').classList.remove('active');
+      this.classList.remove('active');
+    })
   </script>
 </body>
 </html>
