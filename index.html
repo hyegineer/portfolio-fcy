@@ -14,7 +14,7 @@
   <div id="app">
     <!-- header -->
     <div class="header">
-      <button type="button" class="hd-nav-btn">
+      <button id="hdNavBtn" type="button" class="hd-nav-btn">
         <img src="assets/images/btn-menu-gr.svg" alt="">
       </button>
 
@@ -293,6 +293,12 @@
       } else {
         document.querySelector('.hd-search-list').classList.remove('active');
       }
+    })
+    
+    // 헤더 버튼 누를 시 네비게이션 뜸
+    document.querySelector('#hdNavBtn').addEventListener("click", function (e) {
+      document.querySelector('.header-navigation').classList.toggle('active');
+      document.querySelector('.header-overlay').classList.toggle('active');
     })
   </script>
 </body>
