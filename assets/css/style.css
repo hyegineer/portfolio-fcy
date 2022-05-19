@@ -220,8 +220,20 @@
   display: none;
 }
 
-.ftmid-text p {
+.ftmid-text .info {
+  margin-bottom: 5px;
+}
+
+.ftmid-text .texts {
+  display: inline-block;
   color: #8f8f98;
   font-size: 14px;
-  line-height: 1.8;
+  line-height: 13px;
+  border-right: 1px solid #8f8f98;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+.ftmid-text .texts:last-child {
+  border-right: 0;
 }
