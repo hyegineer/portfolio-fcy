@@ -14,7 +14,72 @@
   <div id="app">
     <!-- header -->
     <div class="header">
+      <button type="button" class="hd-nav-btn">
+        <img src="assets/images/btn-menu-gr.svg" alt="">
+      </button>
+
+      <h1 class="hd-logo">
+        <span>logo</span>
+        <img src="" alt="">
+      </h1>
+
+      <div class="hd-search-area">
+        <div class="hd-search-bar">
+          <input id="hdSearchInp" type="text" class="inp" placeholder="기업명을 입력해주세요.">
+        </div>
+
+        <div class="hd-search-list">
+          <span class="in-ttl">상장기업 (3)</span>
+          <p class="in-list"><span>현대</span>차</p>
+          <p class="in-list"><span>현대</span>차</p>
+          <p class="in-list"><span>현대</span>중공업</p>
+
+          <span class="in-ttl">외강기업 (1)</span>
+          <p class="in-list"><span>현대</span></p>
+        </div>
+      </div>
+
+      <a href="#" class="hd-right-btn">
+        <span>고객문의</span>
+        <img src="assets/images/right-btn-img.svg" alt="">
+      </a>
     </div>
+
+    <span class="header-overlay"></span>
+
+    <div class="header-navigation">
+      <div class="hd-nav-section">
+        <h3 class="hd-nav-ttl">기업정보</h3>
+
+        <a class="hd-nav-link">
+          <img src="assets/images/menu-01.svg" alt="">
+          <span>기업검색</span>
+        </a>
+
+        <a class="hd-nav-link">
+          <img src="assets/images/menu-02.svg" alt="">
+          <span>조건검색</span>
+        </a>
+
+        <a class="hd-nav-link">
+          <img src="assets/images/menu-03.svg" alt="">
+          <span>기업정보</span>
+        </a>
+
+        <a class="hd-nav-link">
+          <img src="assets/images/menu-04.svg" alt="">
+          <span>휴폐업조회</span>
+        </a>
+      </div>
+
+      <div class="hd-nav-section">
+        <a class="hd-nav-link">
+          <img src="assets/images/menu-05.svg" alt="">
+          <span>채용</span>
+        </a>
+      </div>
+    </div>
+    <!-- E header -->
 
     <!-- contents -->
     <div class="page-container">
@@ -151,6 +216,7 @@
         </div>
       </div>
     </div>
+    <!-- E contents -->
 
     <!-- footer -->
     <div class="footer">
@@ -216,6 +282,18 @@
         </div>
       </div>
     </div>
+    <!-- E footer -->
   </div>
+
+  <script>
+    // 헤더 검색창에 '현대' 입력했을 때 추천검색어 리스트가 뜸.
+    document.querySelector('#hdSearchInp').addEventListener("input", function (e) {
+      if (this.value === '현대') {
+        document.querySelector('.hd-search-list').classList.add('active');
+      } else {
+        document.querySelector('.hd-search-list').classList.remove('active');
+      }
+    })
+  </script>
 </body>
 </html>
